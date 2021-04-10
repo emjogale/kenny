@@ -8,12 +8,27 @@
 /* container styles */
 .container {
 	display: flex;
+	flex-direction: column;
 	max-width: 860px;
 	margin: 10%;
 }
 
 .intro {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 50%;
 	margin: 0 auto;
+}
+
+/* carousel styles */
+.hidden {
+	display: none;
+}
+.carousel img {
+	width: 100%;
+}
+
+figcaption {
+	text-align: center;
 }
