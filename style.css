@@ -76,6 +76,20 @@ figcaption {
 	background-color: #717171;
 }
 
+/* picture change animation */
+.slide {
+	animation: slide 1.5s ease-in;
+}
+
+@keyframes slide {
+	from {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 /* desktop view */
 @media only screen and (min-width: 1025px) {
 	.intro {
