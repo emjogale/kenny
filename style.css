@@ -1,0 +1,19 @@
+/* general styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* container styles */
+.container {
+	display: flex;
+	max-width: 860px;
+	margin: 10%;
+}
+
+.intro {
+	display: flex;
+	width: 50%;
+	margin: 0 auto;
+}
