@@ -74,31 +74,38 @@ body {
 }
 
 /* Next & previous buttons */
-/* .prev,
+.prev,
 .next {
 	cursor: pointer;
 	position: absolute;
 	top: 35%;
-	width: auto;
-	margin-top: -30px;
-	padding: 10px;
 	color: black;
+	background-color: aqua;
+	padding: 3px 6px;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 20px;
 	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
+	/* width: auto; */
+	border: 1px solid black;
 	user-select: none;
 }
 
-/* Position the "next button" to the right */
-/* .next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
+.prev {
+	left: -10%;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
-.prev {
-	left: 0;
-} */
+.next {
+	right: -10%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: antiquewhite;
+}
 
 /* The dots */
 .dot {
@@ -111,10 +118,9 @@ body {
 	display: inline-block;
 	transition: background-color 0.6s ease;
 }
-
-/* .active,
+.active,
 .dot:hover {
-	background-color: #717171;
+	background-color: aqua;
 }
 
 /* picture change animation */
