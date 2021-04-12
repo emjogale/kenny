@@ -18,50 +18,67 @@
 			<div class="intro">
 				<h1>Hi, I'm Emma</h1>
 				<div class="carousel-container">
-					<div class="images-section">
-						<figure class="img-container slide">
-							<img
-								src="images/coding.png"
-								alt="me-wearing-shirt-and-tie"
-								class="coding"
-							/>
-							<figcaption class="coding">Aspiring Web Developer</figcaption>
-						</figure>
-						<figure class="img-container hidden slide">
-							<img
-								src="images/costume.png"
-								alt="me-wearing-glasses"
-								class="costume"
-							/>
-							<figcaption class="costume">
-								Costume Maker and Supervisor
-							</figcaption>
-						</figure>
-						<figure class="img-container hidden slide">
-							<img
-								src="images/gardening.png"
-								alt="me-wearing-jumper"
-								class="gardening"
-							/>
-							<figcaption class="gardening">Gardener</figcaption>
-						</figure>
-						<figure class="img-container hidden slide">
-							<img src="images/tennis.png" alt="me-sporty" class="tennis" />
-							<figcaption class="tennis">Tennis Player</figcaption>
-						</figure>
-						<figure class="img-container hidden slide">
-							<img src="images/mum2.png" alt="me-mumsy" class="mum" />
-							<figcaption class="mum">Mum</figcaption>
-						</figure>
-					
+					<div class="slider">
+						<!-- slide 1 -->
+						<div class="slide coding">
+							<div class="slide-img">
+								<img
+									src="images/coding.png"
+									alt="me-wearing-shirt-and-tie"
+									class="coding"
+								/>
+							</div>
+							<div class="slide-img-text coding">
+								<p>Aspiring Web Developer</p>
+							</div>
+						</div>
+						<!-- slide 2 -->
+						<div class="slide costume hidden">
+							<div class="slide-img">
+								<img
+									src="images/costume.png"
+									alt="me-wearing-glasses"
+									class="costume"
+								/>
+							</div>
+							<div class="slide-img-text costume">
+								<p>Costume Maker and Supervisor</p>
+							</div>
+						</div>
+						<!-- slide 3 -->
+						<div class="slide gardening hidden">
+							<div class="slide-img">
+								<img
+									src="images/gardening.png"
+									alt="me-wearing-jumper"
+									class="gardening"
+								/>
+							</div>
+							<div class="slide-img-text gardener"><p>Gardener</p></div>
+						</div>
+						<!-- slide 4 -->
+						<div class="slide tennis hidden">
+							<div class="slide-img">
+								<img src="images/tennis.png" alt="me-sporty" class="tennis" />
+							</div>
+							<div class="slide-img-text tennis"><p>Tennis Player</p></div>
+						</div>
+						<!-- slide 5 -->
+						<div class="slide mum hidden">
+							<div class="slide-img">
+								<img src="images/mum2.png" alt="me-mumsy" class="mum" />
+							</div>
+							<div class="slide-img-text mum"><p>Mum</p></div>
+						</div>
+
 						<!-- Next and previous buttons -->
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<a class="next" onclick="plusSlides(1)">&#10095;</a>
 					</div>
-		        
-				   <br>
-				   <!-- The dots/circles -->
-					<div style="text-align:center">
+					<!-- end of slider -->
+					<br />
+					<!-- The dots/circles -->
+					<div style="text-align: center">
 						<span class="dot" onclick="currentSlide(1)"></span>
 						<span class="dot" onclick="currentSlide(2)"></span>
 						<span class="dot" onclick="currentSlide(3)"></span>
@@ -69,15 +86,17 @@
 						<span class="dot" onclick="currentSlide(3)"></span>
 					</div>
 				</div>
+				<!-- end of carousel container -->
 			</div>
-			
-			</div>
+			<!-- end of intro section -->
+
 			<section class="developer"></section>
 			<section class="costume"></section>
 			<section class="gardener"></section>
 			<section class="tennis"></section>
 			<section class="mum"></section>
 		</div>
+		<!-- end of container -->
 		<script src="main.js"></script>
 	</body>
 </html>
