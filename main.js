@@ -1,19 +1,23 @@
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
-
+const dots = document.querySelectorAll(".dot");
+console.log(dots);
 // use an index variable to track which slide we're on
 let index = 0;
 // call the function when the page is loaded
 display(index);
 
-// define the function
+// define the display function
 function display(index) {
 	slides.forEach((slide) => {
 		slide.style.display = "none";
 	});
-	console.log(slides[index]);
 	slides[index].style.display = "block";
+	dots.forEach((dot) => {
+		dot.style.backgroundColor = "#bbb";
+	});
+	dots[index].style.backgroundColor = "aqua";
 }
 
 // next slide function
@@ -37,3 +41,9 @@ function prevSlide() {
 // add event listeners to next and previous buttons
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
+
+// thumbnail image controls
+function currentSlide(n) {
+	console.log(n);
+	display((index = n));
+}
