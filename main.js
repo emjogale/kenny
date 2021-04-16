@@ -40,15 +40,22 @@ function prevSlide() {
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
 // select the clothes rail pic
-const rail = document.querySelector(".coding.slide-in");
-console.log(rail);
+const coding = document.querySelector(".coding");
+const costume = document.querySelector(".costume.slide-in");
+console.log(coding);
+
 // define the slide-in function for the info-box pic
 function slideIn(e) {
 	if (index === 1) {
+		console.log(index);
 		console.log("We need the clothes rail");
-		rail.classList.add("active");
-	} else {
-		rail.classList.remove("active");
+		costume.classList.remove("hidden");
+		costume.classList.add("active");
+		coding.classList.add("hidden");
+		console.log("computer has class hidden");
+	} else if (index === 0) {
+		costume.classList.remove("active");
+		coding.classList.add("show");
 	}
 }
 
