@@ -37,13 +37,29 @@ function prevSlide() {
 	}
 	display(index);
 }
+// select the info-box pics
+const infoSlideImages = document.querySelectorAll(".slide-in");
+// select the clothes rail pic
+const rail = document.querySelector(".coding.slide-in");
+console.log(rail);
+// define the slide-in function for the info-box pic
+function slideIn(e) {
+	if (index === 1) {
+		console.log("We need the clothes rail");
+		rail.classList.add("active");
+	} else {
+		rail.classList.remove("active");
+	}
+}
 
-// add event listeners to next and previous buttons
+// add event listeners to next and previous buttons and slide-in pics
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
+next.addEventListener("click", slideIn);
 
 // thumbnail image controls
 function currentSlide(n) {
 	console.log(n);
 	display((index = n));
+	slideIn((index = n));
 }
