@@ -2,7 +2,7 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
-console.log(dots);
+const infos = console.log(dots);
 // use an index variable to track which slide we're on
 let index = 0;
 // call the function when the page is loaded

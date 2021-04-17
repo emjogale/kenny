@@ -10,6 +10,15 @@ body {
 	font-size: 16px;
 }
 
+h1 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+p {
+	display: block;
+}
+
 /* container styles */
 .container {
 	display: grid;
@@ -27,8 +36,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* min-width: 80%;
-	margin: 10% auto; */
+	min-width: 80%;
+	margin-bottom: 1.5rem;
 }
 
 /* carousel container */
@@ -52,6 +61,10 @@ body {
 	text-align: center;
 }
 
+.info {
+	margin: 1.5rem auto;
+}
+
 /* slide styles */
 .slide {
 	width: 100%;
@@ -72,6 +85,12 @@ body {
 
 .slide-img-text p {
 	font-weight: bold;
+}
+
+.blurb {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: left;
 }
 
 .slide-in {
@@ -172,5 +191,6 @@ body {
 	}
 
 	.prev {
-		left: 43%; */
+		left: 43%; 
+	} */
 }
