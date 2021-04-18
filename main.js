@@ -2,7 +2,9 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
-const infos = console.log(dots);
+// select the info-box pics
+const infoSlideImages = document.querySelectorAll(".slide-in");
+
 // use an index variable to track which slide we're on
 let index = 0;
 // call the function when the page is loaded
@@ -18,6 +20,11 @@ function display(index) {
 		dot.style.backgroundColor = "#bbb";
 	});
 	dots[index].style.backgroundColor = "aqua";
+	infoSlideImages.forEach((info) => {
+		info.style.display = "none";
+	});
+	infoSlideImages[index].style.display = "block";
+	infoSlideImages[index].classList.add("active");
 }
 
 // next slide function
@@ -37,36 +44,13 @@ function prevSlide() {
 	}
 	display(index);
 }
-// select the info-box pics
-const infoSlideImages = document.querySelectorAll(".slide-in");
-// select the clothes rail pic
-const coding = document.querySelector(".coding");
-const costume = document.querySelector(".costume.slide-in");
-console.log(coding);
-
-// define the slide-in function for the info-box pic
-function slideIn(e) {
-	if (index === 1) {
-		console.log(index);
-		console.log("We need the clothes rail");
-		costume.classList.remove("hidden");
-		costume.classList.add("active");
-		coding.classList.add("hidden");
-		console.log("computer has class hidden");
-	} else if (index === 0) {
-		costume.classList.remove("active");
-		coding.classList.add("show");
-	}
-}
 
 // add event listeners to next and previous buttons and slide-in pics
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
-next.addEventListener("click", slideIn);
 
 // thumbnail image controls
 function currentSlide(n) {
 	console.log(n);
 	display((index = n));
-	slideIn((index = n));
 }

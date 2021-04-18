@@ -13,10 +13,11 @@ body {
 h1 {
 	font-size: 2rem;
 	font-weight: bold;
+	display: block;
 }
 
 p {
-	display: block;
+	line-height: 1.5em;
 }
 
 /* container styles */
@@ -73,14 +74,17 @@ p {
 
 .slide-img,
 .info-img {
+	height: auto;
 	width: 100%;
 	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	/* border: 1px solid black; */
 }
 
-.slide-img img,
-.info-img img {
+.slide-img img {
 	height: 100%;
-	width: 250px;
+	width: 225px;
 }
 
 .slide-img-text p {
@@ -88,20 +92,14 @@ p {
 }
 
 .blurb {
-	max-width: 80%;
+	max-width: 95%;
 	margin: 0 auto;
 	text-align: left;
 }
 
-.slide-in {
-	opacity: 0;
-	transition: all 0.5s;
-	transform: translate(-30%) scale(0.95);
-}
-
 .slide-in.active {
 	opacity: 1;
-	transform: translate(0%) scale(1);
+	margin: 0 auto;
 }
 
 /* Next & previous buttons */
@@ -154,10 +152,6 @@ p {
 	background-color: aqua;
 }
 
-.hidden {
-	display: none;
-}
-
 .show {
 	display: block;
 }
@@ -177,9 +171,10 @@ p {
 } */
 
 /* desktop view */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 860px) {
 	.container {
 		padding-top: 5%;
+		grid-template-areas: ".intro" ".info" "blurb";
 	}
 	.intro {
 		flex-direction: row;
