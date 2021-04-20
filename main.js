@@ -2,6 +2,7 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
+let dot;
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
 
@@ -45,12 +46,22 @@ function prevSlide() {
 	display(index);
 }
 
-// add event listeners to next and previous buttons and slide-in pics
+// define the select a slide function
+function selectASlide(e) {
+	let requiredSlideNumber = parseInt(e.target.classList[1]);
+	display(requiredSlideNumber);
+}
+
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
+dots.forEach((dot) => dot.addEventListener("click", selectASlide));
 
-// thumbnail image controls
-function currentSlide(n) {
-	console.log(n);
-	display((index = n));
-}
+// const slider = document.querySelector('.switch');
+// const highlight = document.querySelectorAll('.highlight'); function highlightOff() { highlight.forEach(x => { x.classList.toggle('highlight'); x.style.transition = '.3s ease-in'; }) } slider.addEventListener('mousedown', highlightOff);
+
+//thumbnail image controls
+
+// function currentSlide(n) {
+// 	console.log(n);
+// 	display((index = n));
+// }
