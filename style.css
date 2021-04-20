@@ -32,7 +32,7 @@ p {
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	margin: auto;
 	background-image: url(./images/dot-grid.png);
@@ -41,7 +41,7 @@ p {
 main {
 	display: flex;
 	flex-direction: column;
-
+	align-items: center;
 	margin: 0 auto;
 }
 
@@ -68,6 +68,7 @@ footer .intro {
 
 .info {
 	width: fit-content;
+	margin: 1rem auto;
 }
 
 .slider {
@@ -81,10 +82,9 @@ footer .intro {
 	/* display: flex; */
 }
 
-.slide-img,
-.info-img {
-	height: auto;
-	width: 100;
+.slide-img {
+	height: 225px;
+	width: 225px;
 	margin: 0 auto;
 	overflow: hidden;
 	text-align: center;
@@ -92,23 +92,24 @@ footer .intro {
 }
 
 .slide-img img {
-	height: 100%;
-	width: 225px;
+	width: 100%;
+	height: auto;
 }
 
 .slide-img-text p {
 	font-weight: bold;
 }
 
+.slide-in.active {
+	opacity: 1;
+	margin: 0 auto;
+}
+
+/* blurb section */
 .blurb {
 	max-width: 95%;
 	margin: 0 auto;
 	text-align: left;
-}
-
-.slide-in.active {
-	opacity: 1;
-	margin: 0 auto;
 }
 
 /* Next & previous buttons */
@@ -200,7 +201,7 @@ footer .intro {
 	}
 
 	.blurb {
-		min-width: fit-content;
+		min-width: 50%;
 	}
 	/* .prev,
 	.next {
