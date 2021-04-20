@@ -41,14 +41,6 @@ p {
 	margin-bottom: 1.5rem;
 }
 
-/* carousel container */
-.carousel-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-	width: 100%;
-}
 /* slider styles */
 .slider,
 .info {
@@ -174,11 +166,8 @@ p {
 /* desktop view */
 @media only screen and (min-width: 860px) {
 	.container {
-		padding-top: 5%;
-		grid-template-areas: ".intro" ".info" "blurb";
 	}
 	.intro {
-		flex-direction: row;
 	}
 
 	/* .prev,
