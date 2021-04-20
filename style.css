@@ -10,6 +10,12 @@ body {
 	font-size: 16px;
 }
 
+.logo,
+nav {
+	display: inline-flex;
+	justify-content: space-between;
+}
+
 h1 {
 	font-size: 2rem;
 	font-weight: bold;
@@ -32,12 +38,18 @@ p {
 	background-image: url(./images/dot-grid.png);
 	padding: 30px;
 }
+main {
+	display: flex;
+	flex-direction: column;
 
-.intro {
+	margin: 0 auto;
+}
+
+footer .intro {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: 80%;
+	min-width: fit-content;
 	margin-bottom: 1.5rem;
 }
 
@@ -55,12 +67,16 @@ p {
 }
 
 .info {
-	margin: 1.5rem auto;
+	width: fit-content;
+}
+
+.slider {
+	min-width: fit-content;
 }
 
 /* slide styles */
 .slide {
-	width: 100%;
+	width: fit-content;
 	margin: 0 auto;
 	/* display: flex; */
 }
@@ -68,7 +84,7 @@ p {
 .slide-img,
 .info-img {
 	height: auto;
-	width: 100%;
+	width: 100;
 	margin: 0 auto;
 	overflow: hidden;
 	text-align: center;
@@ -113,13 +129,13 @@ p {
 }
 
 .prev {
-	left: 0;
+	left: -3px;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
 
 .next {
-	right: 0;
+	right: -3px;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
@@ -164,12 +180,28 @@ p {
 } */
 
 /* desktop view */
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 1040px) {
 	.container {
+		max-height: 60%;
+		max-width: 80%;
+		margin-left: 5%;
 	}
-	.intro {
+	main {
+		display: flex;
+		flex-direction: row;
+		width: 70%;
+		margin: 0 auto 0 5%;
 	}
 
+	.intro,
+	.info,
+	.blurb {
+		margin: 5%;
+	}
+
+	.blurb {
+		min-width: fit-content;
+	}
 	/* .prev,
 	.next {
 		top: 60%;
