@@ -46,15 +46,17 @@ function prevSlide() {
 	display(index);
 }
 
-// define the select a slide function
-function selectASlide(e) {
-	let requiredSlideNumber = parseInt(e.target.classList[1]);
-	display(requiredSlideNumber);
-}
-
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
-dots.forEach((dot) => dot.addEventListener("click", selectASlide));
+
+// add an event listener to the dots and display the corresponding slide
+
+dots.forEach((dot, index) => {
+	dot.addEventListener("click", (e) => {
+		let requiredSlideNumber = index;
+		display(requiredSlideNumber);
+	});
+});
 
 // const slider = document.querySelector('.switch');
 // const highlight = document.querySelectorAll('.highlight'); function highlightOff() { highlight.forEach(x => { x.classList.toggle('highlight'); x.style.transition = '.3s ease-in'; }) } slider.addEventListener('mousedown', highlightOff);
