@@ -39,8 +39,7 @@ p {
 	padding: 30px;
 }
 
-header,
-footer {
+header {
 	display: inline-flex;
 	justify-content: space-around;
 }
@@ -57,6 +56,10 @@ main {
 	align-items: center;
 	min-width: fit-content;
 	margin-bottom: 1.5rem;
+}
+footer {
+	text-align: left;
+	margin: 1rem;
 }
 
 /* slider styles */
@@ -193,11 +196,20 @@ main {
 		max-width: 80%;
 		margin-left: 5%;
 	}
-	main {
+	main,
+	header,
+	footer {
 		display: flex;
 		flex-direction: row;
 		width: 70%;
 		margin: 0 auto 0 5%;
+		justify-content: space-between;
+	}
+
+	header,
+	footer {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.intro,
