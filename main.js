@@ -25,7 +25,7 @@ function display(index) {
 		info.style.display = "none";
 	});
 	infoSlideImages[index].style.display = "block";
-	infoSlideImages[index].classList.add("active");
+	
 }
 
 // next slide function
