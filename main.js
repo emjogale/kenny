@@ -2,6 +2,7 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
+console.log(dots);
 let dot;
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
@@ -25,7 +26,6 @@ function display(index) {
 		info.style.display = "none";
 	});
 	infoSlideImages[index].style.display = "block";
-	
 }
 
 // next slide function
@@ -53,6 +53,7 @@ prev.addEventListener("click", prevSlide);
 
 dots.forEach((dot, index) => {
 	dot.addEventListener("click", (e) => {
+		console.log(index);
 		let requiredSlideNumber = index;
 		display(requiredSlideNumber);
 	});

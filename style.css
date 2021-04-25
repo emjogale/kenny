@@ -191,7 +191,7 @@ h1 {
 	font-size: 16px;
 }
 
-h1:after {
+.typing h1:after {
 	position: absolute;
 	content: "";
 	width: 100%;
@@ -201,6 +201,7 @@ h1:after {
 	left: 5%;
 	animation: coding 6s linear 1;
 	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
 }
 
 @keyframes coding {
