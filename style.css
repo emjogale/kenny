@@ -57,6 +57,10 @@ main {
 	min-width: fit-content;
 	margin-bottom: 1.5rem;
 }
+
+.intro h1 {
+	margin: 1rem auto;
+}
 footer {
 	text-align: left;
 	margin: 1rem;
