@@ -6,11 +6,25 @@ console.log(dots);
 let dot;
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
+// select the flower image
+const flower = document.getElementById("flower");
 
 // use an index variable to track which slide we're on
 let index = 0;
 // call the function when the page is loaded
 display(index);
+
+// define the function to change between open and shut pictures
+let isOpen = true;
+function blink() {
+	if (isOpen) {
+		flower.src = "./images/shutEyeFlower.png";
+		isOpen = false;
+	} else {
+		flower.src = "./images/resizedFlower.png";
+		isOpen = true;
+	}
+}
 
 // define the display function
 function display(index) {
@@ -25,7 +39,12 @@ function display(index) {
 	infoSlideImages.forEach((info) => {
 		info.style.display = "none";
 	});
-	infoSlideImages[index].style.display = "block";
+	if (index === 2) {
+		let blinkInterval = setInterval(blink, 1000);
+		infoSlideImages[index].style.display = "block";
+	} else {
+		infoSlideImages[index].style.display = "block";
+	}
 }
 
 // next slide function
@@ -58,13 +77,3 @@ dots.forEach((dot, index) => {
 		display(requiredSlideNumber);
 	});
 });
-
-// const slider = document.querySelector('.switch');
-// const highlight = document.querySelectorAll('.highlight'); function highlightOff() { highlight.forEach(x => { x.classList.toggle('highlight'); x.style.transition = '.3s ease-in'; }) } slider.addEventListener('mousedown', highlightOff);
-
-//thumbnail image controls
-
-// function currentSlide(n) {
-// 	console.log(n);
-// 	display((index = n));
-// }
