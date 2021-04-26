@@ -181,15 +181,16 @@ footer {
 
 /* typing screen styles */
 
-.typing h1 {
+.typing h3 {
 	position: absolute;
 	width: 100%;
 	height: 50%;
 	font-size: 14px;
 	font-family: "Source Code Pro", monospace;
+	font-weight: bold;
 }
 
-.typing h1:after {
+.typing h3:after {
 	position: absolute;
 	content: "";
 	width: 100%;
