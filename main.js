@@ -8,7 +8,8 @@ let dot;
 const infoSlideImages = document.querySelectorAll(".slide-in");
 // select the flower image
 const flower = document.getElementById("flower");
-
+// declare the blinkInterval
+let blinkInterval;
 // use an index variable to track which slide we're on
 let index = 0;
 // call the function when the page is loaded
@@ -40,11 +41,12 @@ function display(index) {
 		info.style.display = "none";
 	});
 	if (index === 2) {
-		let blinkInterval = setInterval(blink, 1000);
+		blinkInterval = setInterval(blink, 1000);
+		console.log(blinkInterval);
 		infoSlideImages[index].style.display = "block";
 	} else {
 		infoSlideImages[index].style.display = "block";
-		clearInterval(blink);
+		clearInterval(blinkInterval);
 	}
 }
 
