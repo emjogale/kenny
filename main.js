@@ -12,6 +12,8 @@ const flower = document.getElementById("flower");
 let blinkInterval;
 // use an index variable to track which slide we're on
 let index = 0;
+
+let currentSlide;
 // call the function when the page is loaded
 display(index);
 
@@ -42,7 +44,7 @@ function display(index) {
 	});
 	if (index === 2) {
 		blinkInterval = setInterval(blink, 1000);
-		console.log(blinkInterval);
+		// console.log(blinkInterval);
 		infoSlideImages[index].style.display = "block";
 	} else {
 		infoSlideImages[index].style.display = "block";
@@ -52,20 +54,31 @@ function display(index) {
 
 // next slide function
 function nextSlide() {
+	console.log(currentSlide);
+	if (currentSlide) {
+		index = currentSlide;
+	}
 	index++;
 	if (index > slides.length - 1) {
 		index = 0;
 	}
 	display(index);
+	currentSlide = false;
 }
 
 // previous slide function
 function prevSlide() {
+	console.log("current slide is ", currentSlide);
+	console.log("index is ", index);
+	if (currentSlide) {
+		index = currentSlide;
+	}
 	index--;
 	if (index < 0) {
 		index = slides.length - 1;
 	}
 	display(index);
+	currentSlide = false;
 }
 
 next.addEventListener("click", nextSlide);
@@ -75,8 +88,9 @@ prev.addEventListener("click", prevSlide);
 
 dots.forEach((dot, index) => {
 	dot.addEventListener("click", (e) => {
-		console.log(index);
-		let requiredSlideNumber = index;
-		display(requiredSlideNumber);
+		console.log(currentSlide);
+
+		display(index);
+		currentSlide = index;
 	});
 });
