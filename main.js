@@ -44,6 +44,7 @@ function display(index) {
 		infoSlideImages[index].style.display = "block";
 	} else {
 		infoSlideImages[index].style.display = "block";
+		clearInterval(blink);
 	}
 }
 
