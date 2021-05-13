@@ -2,7 +2,8 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
-console.log(dots);
+const typing = document.querySelector(".typing");
+// console.log(dots);
 let dot;
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
@@ -42,6 +43,13 @@ function display(index) {
 	infoSlideImages.forEach((info) => {
 		info.style.display = "none";
 	});
+
+	if (index !== 0) {
+		// append the .hideText class to .typing
+
+		typing.classList.add("nonActive");
+		console.log("typing classes", typing.classList);
+	}
 	if (index === 2) {
 		blinkInterval = setInterval(blink, 1000);
 		// console.log(blinkInterval);
@@ -49,6 +57,7 @@ function display(index) {
 	} else {
 		infoSlideImages[index].style.display = "block";
 		clearInterval(blinkInterval);
+		typing.classList.remove("hideText");
 	}
 }
 

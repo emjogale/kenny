@@ -203,6 +203,10 @@ footer {
 	animation-delay: 1.5s;
 }
 
+.typing.nonActive h3:after {
+	display: none;
+}
+
 @keyframes coding {
 	0% {
 		content: "H";
