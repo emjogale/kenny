@@ -43,7 +43,12 @@ function display(index) {
 	infoSlideImages.forEach((info) => {
 		info.style.display = "none";
 	});
-
+	// remove the
+	if (index === 0) {
+		if (typing.classList.contains("nonActive")) {
+			typing.classList.remove("nonActive");
+		}
+	}
 	if (index !== 0) {
 		// append the .hideText class to .typing
 
