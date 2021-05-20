@@ -1,3 +1,25 @@
+// Hamburger menu functionality
+const menu = document.querySelector(".menu");
+const hamburger = document.querySelector(".hamburger");
+const xIcon = document.querySelector(".xIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+// define the toggleMenu function
+function toggleMenu() {
+	if (menu.classList.contains("showMenu")) {
+		menu.classList.remove("showMenu");
+		xIcon.style.display = "none";
+		menuIcon.style.display = "block";
+	} else {
+		menu.classList.add("showMenu");
+		xIcon.style.display = "block";
+		menuIcon.style.display = "none";
+	}
+}
+// add a click event listener to the hamburger button
+hamburger.addEventListener("click", toggleMenu);
+
+// slide show functionality
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");

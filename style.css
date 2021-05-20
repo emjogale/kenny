@@ -46,8 +46,7 @@ header {
 }
 
 /* hamburger menu styles */
-.ham {
-	/* position: fixed; */
+.hamburger {
 	top: 1rem;
 	right: 1rem;
 	z-index: 100; /*keeps it above other elements */
@@ -64,6 +63,7 @@ span.xIcon {
 
 .menu {
 	position: fixed;
+	z-index: 0;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -78,7 +78,7 @@ span.xIcon {
 }
 
 /* show the menu class - to be toggled by js */
-.showNav {
+.showMenu {
 	transform: translateY(0);
 }
 
