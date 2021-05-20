@@ -42,7 +42,46 @@ p {
 header {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
+
+/* hamburger menu styles */
+.ham {
+	/* position: fixed; */
+	top: 1rem;
+	right: 1rem;
+	z-index: 100; /*keeps it above other elements */
+	/* width: 1rem;
+	height: 1rem; */
+	border: 1px solid black;
+	background: white;
+	cursor: pointer;
+}
+
+span.xIcon {
+	display: none;
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 1rem;
+	width: 100%;
+	height: fit-content;
+	background: aqua;
+	list-style: none;
+	padding: 2rem;
+	transform: translateY(-100%); /* keep it offscreen to start */
+	transition: transform 0.2s;
+}
+
+/* show the menu class - to be toggled by js */
+.showNav {
+	transform: translateY(0);
+}
+
 main {
 	display: flex;
 	flex-direction: column;
