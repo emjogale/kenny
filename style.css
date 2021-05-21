@@ -47,9 +47,10 @@ header {
 
 /* hamburger menu styles */
 .hamburger {
+	position: fixed;
 	top: 1rem;
 	right: 1rem;
-	z-index: 100; /*keeps it above other elements */
+	z-index: 999; /*keeps it above other elements */
 	/* width: 1rem;
 	height: 1rem; */
 	border: 1px solid black;
@@ -63,7 +64,7 @@ span.xIcon {
 
 .menu {
 	position: fixed;
-	z-index: 0;
+	/* z-index: -1; */
 	top: 0;
 	left: 0;
 	right: 0;
@@ -72,14 +73,30 @@ span.xIcon {
 	height: fit-content;
 	background: aqua;
 	list-style: none;
-	padding: 2rem;
+	padding: 1.5rem;
 	transform: translateY(-100%); /* keep it offscreen to start */
 	transition: transform 0.2s;
+	text-align: left;
+}
+
+.menu li {
+	padding: 0.5rem 0;
 }
 
 /* show the menu class - to be toggled by js */
 .showMenu {
 	transform: translateY(0);
+}
+
+.menuLink {
+	font-size: 1rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+.menuLink:hover {
+	text-decoration: underline;
 }
 
 main {
