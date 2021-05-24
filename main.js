@@ -3,6 +3,7 @@ const menu = document.querySelector(".menu");
 const hamburger = document.querySelector(".hamburger");
 const xIcon = document.querySelector(".xIcon");
 const menuIcon = document.querySelector(".menuIcon");
+const menuLinks = document.querySelectorAll(".menuLink");
 
 // define the toggleMenu function
 function toggleMenu() {
@@ -18,6 +19,11 @@ function toggleMenu() {
 }
 // add a click event listener to the hamburger button
 hamburger.addEventListener("click", toggleMenu);
+
+// hide the menu when a link is clicked on
+menuLinks.forEach(function (menulink) {
+	menulink.addEventListener("click", toggleMenu);
+});
 
 // slide show functionality
 const next = document.querySelector(".next");
@@ -75,7 +81,7 @@ function display(index) {
 		// append the .hideText class to .typing
 
 		typing.classList.add("nonActive");
-		console.log("typing classes", typing.classList);
+		// console.log("typing classes", typing.classList);
 	}
 	if (index === 2) {
 		blinkInterval = setInterval(blink, 1000);
