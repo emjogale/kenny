@@ -31,8 +31,9 @@ const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const typing = document.querySelector(".typing");
-const blurbs = document.querySelectorAll(".blurb");
-// console.log(dots);
+const notes = document.querySelectorAll(".notes");
+
+console.log(notes);
 let dot;
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
@@ -93,6 +94,10 @@ function display(index) {
 		clearInterval(blinkInterval);
 		typing.classList.remove("hideText");
 	}
+	notes.forEach((note) => {
+		note.style.display = "none";
+	});
+	notes[index].style.display = "block";
 }
 
 // next slide function
