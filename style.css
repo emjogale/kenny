@@ -44,6 +44,11 @@ header {
 	justify-content: space-around;
 	align-items: center;
 }
+.logo {
+	font-family: "Courgette", cursive;
+	font-size: 2rem;
+	color: #0a4958;
+}
 
 /* hamburger menu styles */
 .hamburger {
@@ -370,6 +375,10 @@ footer {
 		justify-content: space-between;
 	}
 
+	header {
+		background-color: aqua;
+	}
+
 	.intro,
 	.info,
 	.blurb {
@@ -387,8 +396,13 @@ footer {
 		transform: translateY(0);
 		position: relative;
 		top: 0.5rem;
+		text-align: end;
 	}
 	.menu li {
 		display: inline-block;
+		padding: 0 2rem;
+	}
+	.logo {
+		padding-left: 1rem;
 	}
 }
