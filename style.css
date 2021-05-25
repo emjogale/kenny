@@ -112,6 +112,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	min-width: fit-content;
+	margin-top: 0.5rem;
 	margin-bottom: 1.5rem;
 }
 
@@ -356,7 +357,7 @@ footer {
 	footer {
 		display: flex;
 		flex-direction: row;
-		width: 70%;
+		width: 80%;
 		margin: 0 auto 0 5%;
 		justify-content: space-between;
 	}
@@ -378,12 +379,16 @@ footer {
 	.blurb {
 		min-width: 50%;
 	}
-	/* .prev,
-	.next {
-		top: 60%;
+	.hamburger {
+		display: none;
 	}
-
-	.prev {
-		left: 43%; 
-	} */
+	.menu {
+		/* display: inline-block; */
+		transform: translateY(0);
+		position: relative;
+		top: 0.5rem;
+	}
+	.menu li {
+		display: inline-block;
+	}
 }
