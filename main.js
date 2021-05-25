@@ -31,6 +31,7 @@ const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const typing = document.querySelector(".typing");
+const blurbs = document.querySelectorAll(".blurb");
 // console.log(dots);
 let dot;
 // select the info-box pics
