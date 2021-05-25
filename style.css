@@ -144,7 +144,7 @@ footer {
 
 .info {
 	width: fit-content;
-	margin: 1rem auto;
+	margin: 0.1rem auto;
 }
 
 .info-img {
@@ -358,15 +358,15 @@ footer {
 		margin: 20px auto;
 	}
 	main,
-	header,
 	footer {
 		display: flex;
 		flex-direction: row;
 		width: 80%;
-		margin: 0 auto 0 5%;
+		/* margin: 0 auto 0 5%; */
 		justify-content: space-between;
 	}
 	main {
+		margin-left: 0;
 		margin-top: 2rem auto;
 	}
 	header,
