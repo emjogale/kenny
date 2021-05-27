@@ -106,22 +106,6 @@ span.xIcon {
 	text-decoration: underline;
 }
 
-main {
-	display: grid;
-	grid-template-rows: 2fr 1.5fr 0.5fr;
-	grid-template-areas:
-		"intro"
-		"info"
-		"blurb";
-}
-
-/* main,
-.intro,
-.info,
-.blurb {
-	border: 1px solid black;
-} */
-
 .intro {
 	grid-area: "intro";
 	display: flex;
@@ -201,7 +185,8 @@ footer {
 .blurb {
 	grid-area: "blurb";
 	max-width: 95%;
-	margin: 0 auto;
+	min-height: 100px;
+	/* margin: 0 auto; */
 	text-align: left;
 }
 
@@ -348,20 +333,6 @@ footer {
 	}
 }
 
-/* picture change animation */
-/* .slide {
-	animation: slide 1.5s ease-in;
-} */
-
-/* @keyframes slide {
-	from {
-		opacity: 0.5;
-	}
-	to {
-		opacity: 1;
-	}
-} */
-
 /* desktop view */
 @media only screen and (min-width: 1040px) {
 	.container {
@@ -401,8 +372,11 @@ footer {
 	}
 
 	.blurb {
+		display: flex;
 		width: auto;
+		align-items: center;
 	}
+
 	.hamburger {
 		display: none;
 	}
