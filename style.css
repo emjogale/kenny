@@ -120,7 +120,7 @@ span.xIcon {
 }
 footer {
 	text-align: left;
-	/* margin: 0.5rem; */
+	font-size: 0.8rem;
 }
 
 /* slider styles */
@@ -137,7 +137,6 @@ footer {
 }
 
 .info {
-	grid-area: "info";
 	width: fit-content;
 	margin: 0.1rem auto;
 }
@@ -182,10 +181,8 @@ footer {
 
 /* blurb section */
 .blurb {
-	grid-area: "blurb";
 	max-width: 95%;
 	min-height: 100px;
-	/* margin: 0 auto; */
 	text-align: left;
 }
 
