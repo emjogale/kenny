@@ -29,6 +29,7 @@ p {
 /* container styles */
 .container {
 	display: grid;
+
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -355,13 +356,13 @@ footer {
 		place-content: center;
 		margin: 20px auto;
 	}
-	.main,
+	main,
 	footer {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	.main {
+	main {
 		margin-left: 0;
 		margin-top: 2rem;
 	}
@@ -407,6 +408,6 @@ footer {
 	}
 }
 
-div {
+/* div {
 	border: 1px solid black;
-}
+} */
