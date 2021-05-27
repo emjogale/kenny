@@ -107,11 +107,23 @@ span.xIcon {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: 2fr 1.5fr 0.5fr;
+	grid-template-areas:
+		"intro"
+		"info"
+		"blurb";
+}
+
+main,
+.intro,
+.info,
+.blurb {
+	border: 1px solid black;
 }
 
 .intro {
+	grid-area: "intro";
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -142,6 +154,7 @@ footer {
 }
 
 .info {
+	grid-area: "info";
 	width: fit-content;
 	margin: 0.1rem auto;
 }
@@ -186,6 +199,7 @@ footer {
 
 /* blurb section */
 .blurb {
+	grid-area: "blurb";
 	max-width: 95%;
 	margin: 0 auto;
 	text-align: left;
