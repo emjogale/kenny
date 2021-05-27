@@ -29,11 +29,10 @@ p {
 /* container styles */
 .container {
 	display: grid;
-
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	/* height: 100vh; */
 	width: 100%;
 	margin: 0 auto;
 	background-image: url(./images/dot-grid.png);
