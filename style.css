@@ -106,9 +106,8 @@ span.xIcon {
 }
 
 main {
-	/* display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
-	height: 100vh; */
+	display: flex;
+	flex-direction: column;
 }
 
 .intro {
