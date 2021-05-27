@@ -115,12 +115,12 @@ main {
 		"blurb";
 }
 
-main,
+/* main,
 .intro,
 .info,
 .blurb {
 	border: 1px solid black;
-}
+} */
 
 .intro {
 	grid-area: "intro";
