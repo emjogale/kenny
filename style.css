@@ -330,6 +330,13 @@ footer {
 	}
 }
 
+main.about {
+	margin: 2rem 1rem;
+}
+p.about {
+	text-align: left;
+}
+
 /* desktop view */
 @media only screen and (min-width: 1040px) {
 	.container {
