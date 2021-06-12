@@ -404,6 +404,10 @@ p.about {
 	.next {
 		right: -12%;
 	}
+
+	.main.projects {
+		flex-direction: column;
+	}
 }
 
 /* div {

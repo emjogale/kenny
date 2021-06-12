@@ -1,0 +1,16 @@
+h1.projects {
+	background-color: black;
+	color: blanchedalmond;
+	padding: 0.5rem;
+	margin-top: 3rem;
+}
+
+@media only screen and (min-width: 1040px) {
+	h1.projects {
+		margin-top: 0.5rem;
+	}
+	main.projects {
+		display: flex;
+		flex-direction: column;
+	}
+}
