@@ -1,13 +1,18 @@
-.container.projects {
-	min-width: fit-content;
-}
-
 h1.projects {
-	background-color: black;
 	color: blanchedalmond;
 	padding: 0.5rem;
 	margin-top: 3rem;
 	/* text-align: center; */
+}
+
+main.projects {
+	background-color: black;
+	margin-top: 3rem;
+}
+
+img.animated-gif {
+	width: 300px;
+	height: auto;
 }
 
 @media only screen and (min-width: 1040px) {
