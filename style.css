@@ -351,6 +351,10 @@ p.about {
 		flex-direction: row;
 		justify-content: space-between;
 	}
+
+	main.about {
+		flex-direction: column;
+	}
 	main {
 		margin-left: 0;
 		margin-top: 2rem;
