@@ -180,11 +180,6 @@ footer {
 	margin: 0 auto;
 }
 
-.img.costume.slide-in {
-	display: none;
-	left: -266px;
-}
-
 /* blurb section */
 .blurb {
 	max-width: 95%;

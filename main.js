@@ -32,8 +32,11 @@ const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const typing = document.querySelector(".typing");
 const notes = document.querySelectorAll(".notes");
+const rail = document.querySelector(".costume.slide-in");
+console.log(rail);
+let computedStyles = window.getComputedStyle(rail);
 
-console.log(notes);
+// console.log(notes);
 let dot;
 // select the info-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
@@ -81,10 +84,8 @@ function display(index) {
 	}
 
 	if (index !== 0) {
-		// append the .hideText class to .typing
-
+		// append the .nonActive class to .typing to hide the text if it isn't the coding slide
 		typing.classList.add("nonActive");
-		// console.log("typing classes", typing.classList);
 	}
 	if (index === 2) {
 		blinkInterval = setInterval(blink, 1000);
@@ -92,6 +93,11 @@ function display(index) {
 		infoSlideImages[index].style.display = "block";
 	} else if (index === 1) {
 		console.log("ok here is the clothes rails chance");
+		infoSlideImages[index].style.display = "block";
+		rail.style.left = "-255px";
+		console.log(
+			"the picture left position is " + computedStyles.getPropertyValue("left")
+		);
 		clearInterval(blinkInterval);
 		typing.classList.remove("hideText");
 	} else {
