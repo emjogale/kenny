@@ -73,7 +73,7 @@ function display(index) {
 	infoSlideImages.forEach((info) => {
 		info.style.display = "none";
 	});
-	// remove the
+	// add the typing class to start the hello world animation
 	if (index === 0) {
 		if (typing.classList.contains("nonActive")) {
 			typing.classList.remove("nonActive");
@@ -90,6 +90,10 @@ function display(index) {
 		blinkInterval = setInterval(blink, 1000);
 		// console.log(blinkInterval);
 		infoSlideImages[index].style.display = "block";
+	} else if (index === 1) {
+		console.log("ok here is the clothes rails chance");
+		clearInterval(blinkInterval);
+		typing.classList.remove("hideText");
 	} else {
 		infoSlideImages[index].style.display = "block";
 		clearInterval(blinkInterval);
