@@ -79,6 +79,7 @@ function display(index) {
 			typing.classList.remove("nonActive");
 		}
 	}
+
 	if (index !== 0) {
 		// append the .hideText class to .typing
 
@@ -136,8 +137,6 @@ prev.addEventListener("click", prevSlide);
 
 dots.forEach((dot, index) => {
 	dot.addEventListener("click", (e) => {
-		console.log(currentSlide);
-
 		display(index);
 		currentSlide = index;
 	});
