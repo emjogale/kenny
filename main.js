@@ -12,6 +12,7 @@ function toggleMenu() {
 		xIcon.style.display = "none";
 		menuIcon.style.display = "block";
 	} else {
+		console.log("about to show menu");
 		menu.classList.add("showMenu");
 		xIcon.style.display = "block";
 		menuIcon.style.display = "none";
