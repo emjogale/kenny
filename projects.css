@@ -1,26 +1,45 @@
+main.projects {
+	margin-top: 1rem;
+}
+
 h1.projects {
 	color: blanchedalmond;
 	padding: 0.5rem;
-	margin-top: 3rem;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+
 	/* text-align: center; */
 }
 
-main.projects {
+.intro.projects {
 	background-color: black;
-	margin-top: 3rem;
+}
+
+.project-gallery {
+	margin-top: 1rem;
+}
+
+.project img {
+	border: 3px solid #bbb;
 }
 
 img.animated-gif {
-	width: 300px;
-	height: auto;
+	display: none;
 }
 
 @media only screen and (min-width: 1040px) {
+	header {
+		width: 100%;
+	}
 	h1.projects {
 		margin-top: 0.5rem;
+		font-size: 1.5rem;
 	}
 	main.projects {
 		display: flex;
 		flex-direction: column;
+	}
+	.intro.projects {
+		margin: 1rem 0 0 0;
 	}
 }
