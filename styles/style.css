@@ -103,7 +103,6 @@ select {
 body {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
-	background-image: url(../images/background.png);
 }
 
 main {
@@ -124,8 +123,9 @@ p {
 .container {
 	display: grid;
 	place-content: center;
-
+	width: 100%;
 	padding: 1.25rem;
+	background-image: url(../images/dot-grid.png);
 }
 
 header {
@@ -226,6 +226,7 @@ footer {
 
 .info {
 	margin: 0.1rem auto;
+	width: fit-content;
 }
 
 .info-img {
@@ -269,7 +270,6 @@ img.slide-img {
 
 /* blurb section */
 .blurb {
-	max-width: 95%;
 	min-height: 100px;
 	text-align: left;
 }
@@ -341,7 +341,7 @@ img.slide-img {
 	height: 100%;
 	line-height: 20px;
 	top: -140%;
-	left: 5%;
+	left: 2%;
 	animation: coding 6s linear 1;
 	animation-fill-mode: forwards;
 	animation-delay: 1.5s;
@@ -423,6 +423,11 @@ p.about {
 	text-align: left;
 }
 
+p.notes {
+	background-color: white;
+	padding: 0.5rem;
+}
+
 /* desktop view */
 @media only screen and (min-width: 1040px) {
 	.container {
@@ -452,7 +457,7 @@ p.about {
 	.intro,
 	.info,
 	.blurb {
-		margin: 5%;
+		margin: 2rem;
 	}
 
 	.info,
@@ -460,6 +465,10 @@ p.about {
 		display: flex;
 		width: auto;
 		align-items: center;
+	}
+
+	.blurb {
+		flex-grow: 1;
 	}
 
 	.hamburger {
