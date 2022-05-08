@@ -152,8 +152,12 @@ header {
 	cursor: pointer;
 }
 
-span.xIcon {
+span.hide-icon {
 	display: none;
+}
+
+span.show-icon {
+	display: block;
 }
 
 .menu {
@@ -178,7 +182,7 @@ span.xIcon {
 }
 
 /* show the menu class - to be toggled by js */
-.showMenu {
+.show {
 	transform: translateY(0);
 }
 

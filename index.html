@@ -30,9 +30,15 @@
 				<div class="logo">EmmaGale</div>
 
 				<!-- mobile menu -->
-				<button class="hamburger">
-					<span class="menuIcon material-icons"> menu </span>
-					<span class="xIcon material-icons"> close </span>
+				<button class="hamburger" aria-label="menu" aria-expanded="false">
+					<span
+						class="menuIcon material-icons show-icon"
+						aria-hidden="true"
+						focusable="false"
+					>
+						menu
+					</span>
+					<span class="xIcon material-icons hide-icon"> close </span>
 				</button>
 				<ul class="menu">
 					<li><a class="menu-link" href="#">Home</a></li>
@@ -191,11 +197,11 @@
 				</section>
 			</main>
 			<footer>
-				<p>&copy Emma Gale 2021</p>
+				<p>&copy Emma Gale 2022</p>
 			</footer>
 		</div>
 		<!-- end of container -->
-		<script src="/scripts/nav.js"></script>
+		<script src="/scripts/nav2.js"></script>
 		<script src="/scripts/main.js"></script>
 	</body>
 </html>
