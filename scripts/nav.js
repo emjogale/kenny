@@ -6,15 +6,12 @@ const menuIcon = document.querySelector(".menuIcon");
 
 // define the toggleMenu function
 function toggleMenu() {
-	if (menu.classList.contains("show")) {
-		menu.classList.remove("show");
-		xIcon.style.display = "none";
-		menuIcon.style.display = "block";
-	} else {
-		menu.classList.add("show");
-		xIcon.style.display = "block";
-		menuIcon.style.display = "none";
-	}
+	menu.classList.toggle("show");
+	xIcon.classList.toggle("hide-icon");
+	xIcon.classList.toggle("show-icon");
+	menuIcon.classList.toggle("show-icon");
+	menuIcon.classList.toggle("hide-icon");
+	setAriaExpanded();
 }
 
 // set aria-expanded true or false on hamburger button
@@ -26,6 +23,8 @@ function setAriaExpanded() {
 	} else {
 		expanded = "false";
 	}
+	hamburger.setAttribute("aria-expanded", expanded);
 }
+
 // add a click event listener to the hamburger button
 hamburger.addEventListener("click", toggleMenu);
