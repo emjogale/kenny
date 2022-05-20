@@ -19,7 +19,7 @@ h1.projects-header {
 	color: var(--dark-green);
 }
 
-p.info {
+p.container3-content {
 	min-height: 9rem;
 }
 
@@ -52,15 +52,22 @@ img.project-img {
 		flex-direction: column;
 		justify-content: center;
 	}
-	.intro.projects {
+	.container1.projects {
 		margin: 1rem 0 0 0;
+	}
+
+	.container2.projects {
+		flex-direction: column;
+		/* height: 100%; */
+		justify-content: center;
+		align-items: center;
 	}
 	.project-gallery {
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	p#info {
+	p#container3-content {
 		min-height: auto;
 	}
 }

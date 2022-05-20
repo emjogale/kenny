@@ -11,7 +11,7 @@ let computedStyles = window.getComputedStyle(rail);
 
 // console.log(notes);
 let dot;
-// select the info-box pics
+// select the container2-box pics
 const infoSlideImages = document.querySelectorAll(".slide-in");
 // select the flower image
 const flower = document.getElementById("flower");
@@ -46,8 +46,8 @@ function display(index) {
 		dot.style.backgroundColor = "#bbb";
 	});
 	dots[index].style.backgroundColor = "aqua";
-	infoSlideImages.forEach((info) => {
-		info.style.display = "none";
+	infoSlideImages.forEach((container2) => {
+		container2.style.display = "none";
 	});
 	// add the typing class to start the hello world animation
 	if (index === 0) {

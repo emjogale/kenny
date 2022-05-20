@@ -26,7 +26,7 @@ const img = document.getElementById("project-img");
 const title = document.getElementById("project-title");
 const description = document.getElementById("description");
 // const alt = document.getElementById("project-img");
-const text = document.getElementById("info");
+const text = document.getElementById("container3-content");
 const link = document.getElementById("link");
 
 const h2link = document.getElementById("h2link");
@@ -48,7 +48,7 @@ function showProject(project) {
 	img.src = item.img;
 	title.textContent = item.title;
 	description.textContent = item.description;
-	info.textContent = item.text;
+	container3-content.textContent = item.text;
 	link.href = item.link;
 	h2link.href = item.link;
 }
